@@ -44,6 +44,12 @@ export type NodeResizerProps = {
   onResize?: OnResize;
   /** Callback called when resizing ends */
   onResizeEnd?: OnResizeEnd;
+  /** 図形の回転を考慮する */
+  rotation?: {
+    anchorX: number;
+    anchorY: number;
+    angle: number;
+  };
 };
 
 export type ResizeControlProps = Pick<
@@ -59,6 +65,7 @@ export type ResizeControlProps = Pick<
   | 'onResizeStart'
   | 'onResize'
   | 'onResizeEnd'
+  | 'rotation'
 > & {
   /** Position of the control
    * @example ControlPosition.TopLeft, ControlPosition.TopRight,
